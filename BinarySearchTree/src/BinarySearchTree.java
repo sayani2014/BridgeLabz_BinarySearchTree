@@ -1,5 +1,5 @@
 /**
- * Ability to create a BST by adding 56 and then adding 30 & 70
+ * Ability to add 22, 40, 11, 3, 16, 60, 95, 65, 63, 67 in the binary search tree
  *
  * @author: SAYANI KOLEY
  * @since: 27.06.2021
@@ -61,6 +61,16 @@ public class BinarySearchTree {
         binary.insert(56);
         binary.insert(30);
         binary.insert(70);
+        binary.insert(22);
+        binary.insert(40);
+        binary.insert(11);
+        binary.insert(3);
+        binary.insert(16);
+        binary.insert(60);
+        binary.insert(95);
+        binary.insert(65);
+        binary.insert(63);
+        binary.insert(67);
 
         binary.inorderTraversal(binary.root);
     }
