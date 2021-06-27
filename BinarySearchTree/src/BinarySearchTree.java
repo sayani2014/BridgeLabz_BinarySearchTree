@@ -1,5 +1,5 @@
 /**
- * Ability to add 22, 40, 11, 3, 16, 60, 95, 65, 63, 67 in the binary search tree
+ * Ability to search 63 in the binary search tree
  *
  * @author: SAYANI KOLEY
  * @since: 27.06.2021
