@@ -7,6 +7,7 @@
 
 public class BinarySearchTree {
     Node root;
+    static boolean flag = false;
 
     public BinarySearchTree() {
         root = null;
@@ -55,6 +56,23 @@ public class BinarySearchTree {
         }
     }
 
+    public void searchNode(Node node, int value) {
+        if(root == null)
+            System.out.println("Tree is empty");
+        else {
+            if(node.data == value) {
+                flag = true;
+                return;
+            }
+            if(flag == false && node.left != null){
+                searchNode(node.left, value);
+            }
+            if(flag == false && node.right != null){
+                searchNode(node.right, value);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         BinarySearchTree binary = new BinarySearchTree();
 
@@ -72,6 +90,15 @@ public class BinarySearchTree {
         binary.insert(63);
         binary.insert(67);
 
+        System.out.println("Inorder Traversal of Binary Search tree");
         binary.inorderTraversal(binary.root);
+
+        System.out.println("\n");
+        binary.searchNode(binary.root, 63);
+
+        if(flag)
+            System.out.println("Element 63 is present in the binary tree");
+        else
+            System.out.println("Element 63 is not present in the binary tree");
     }
 }
